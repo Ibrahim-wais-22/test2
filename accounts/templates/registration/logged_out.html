@@ -1,0 +1,12 @@
+{% extends 'templates/base.html' %}
+{% load bootstrap4 %}
+ {% block body %}
+ <br/>
+<br/>
+ <div class="m-5 ">
+<br/>
+<br/>
+  <p>Logged out!</p>
+  <a href="{% url 'login'%}">Click here to login again.</a>
+  </div>
+ {% endblock  %}

@@ -1,0 +1,21 @@
+{% extends 'templates/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container m-1">
+
+<h1 style='text-align:center;'>{{article.title}}</h1> 
+
+<img src="{{article.image.url}}" width="100%">
+   
+<div class="m-2">
+    <h4>{{article.contant}}</h4>
+</div>
+   
+<h3>{{article.auther}} </h3>
+</div>
+    <a href="/home/addblog">go</a>
+
+    
+    
+    {% endblock body %}

@@ -1,0 +1,35 @@
+{% extends 'templates/base.html' %}
+{% load static %}
+{% block body%}
+
+
+
+                        <!-- start card -->
+
+                      {% for blog in blogs %}
+                    
+  
+                               
+                           <div class="continer border border-success m-2">
+                            <div class="row">
+                       
+                           
+                            <div class="bg-3 col-3 md-3 m-0">
+                                  <img class="image-list" src="{{ blog.image.url }}"  width="190" height="155" />
+                            </div>
+                            <div class="bg-9 col-9 md-9 m-0">
+                            
+                                <a href = "{% url 'Home:blog' blog.slug %}"> <h3 class="card-title  rounded p-2"> {{blog.title}}</h3></a>
+                                 <p>{{ blog.contant|safe|truncatewords:"20"|linebreaks }}
+                                  </p>
+                                
+                                 <div class="split2 m-0">
+                                    <h5 >  كتابة : {{blog.owner}} </h5><h5 > {{blog.date|date:"c"}}</h5>
+                                    </div>
+                            </div>
+                           </div>
+                        </div>
+                        
+                      {% endfor %}
+                    
+  {% endblock body%}

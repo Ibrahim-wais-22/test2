@@ -1,0 +1,19 @@
+{% extends 'templates/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block body %}
+
+
+<h2> add blog Form</h2>
+
+{# Display a form #}
+
+<form  method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form formadd %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+</form>
+
+{% endblock body %}

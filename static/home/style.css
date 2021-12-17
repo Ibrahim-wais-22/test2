@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+body {
+    background: #E2E6EA;
+}
+.card {
+    background: #E2E6EA;
+}
+h1,h3 {
+    text-align: center;
+    font-weight: 900;
+    line-height: 1;
+}
+h5 {
+    color: #824936;
+}
+p {
+    color: #8a8a8a;
+}
+.split,.split2 {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 40em) {
+      .split,.split2 {
+          flex-direction: row;
+      }
+      .split, .split2 > * {
+          flex-basis: 100%;
+      }
+      .split > * {
+          margin-right: 2em;
+      }
+      .split2 > * + * {
+        margin-right: 10em;
+    }
+  }
+
+.image-list {
+    display: block;
+    max-width: 100%;
+    /* margin-right: auto;
+    margin-left: auto; */
+}
+.btn-text {
+    font-size: 20px;
+    font-weight: 500;
+}
+  
